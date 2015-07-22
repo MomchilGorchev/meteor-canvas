@@ -2,12 +2,25 @@
   Layout specific declarations
 * * * * * * * * * * * * * * * */
 
+html, body{
+  height:100%;
+}
 
 header{
   background: silver;
 }
 
+.main-wrapper{
+  min-height:94%;
+  margin-bottom: -80px;
+  &:after{
+    content: "";
+    display: block;
+    height: 80px;
+  }
+}
+
 footer{
   background: silver;
-  height: 35px;
+  height: 87px;
 }
