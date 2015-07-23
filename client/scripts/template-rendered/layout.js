@@ -16,6 +16,12 @@ Template.mainLayout.rendered = function(){
     ctx.fillStyle = 'rgb(100, 123, 214)';
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
+    function init(){
+        Draw();
+        changePosition();
+        animateThis();
+    }
+
 
     function Star(x, y, radius, color){
 
@@ -53,14 +59,14 @@ Template.mainLayout.rendered = function(){
         }
     }
 
-    Draw();
+
 
     function changePosition(){
         for (var k = 0; k < starsAmount; k++){
             changeElement(stars[k]);
         }
     }
-    changePosition();
+
 
     function changeElement(star){
         var pos = {
@@ -80,7 +86,7 @@ Template.mainLayout.rendered = function(){
 
     function animateThis(){
 
-        var anim = requestAnimationFrame(animateThis);
+        requestAnimationFrame(animateThis);
 
         ctx.fillStyle = 'rgb(100, 123, 214)';
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
@@ -91,8 +97,6 @@ Template.mainLayout.rendered = function(){
 
     }
 
-
-    animateThis();
-
+    init();
 
 };
