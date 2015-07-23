@@ -1,6 +1,6 @@
 Template.draggableElement.rendered = function(){
 
-    $('.draggable__component.header').draggable({
+    var options = {
         containment: 'body',
         cursor: 'crosshair',
         revert: 'invalid',
@@ -8,28 +8,13 @@ Template.draggableElement.rendered = function(){
         start: function(ev, ui){
             ui.helper.addClass('dragging');
         }
-    });
+    };
 
-    $('.draggable__component.content').draggable({
-        containment: 'body',
-        cursor: 'crosshair',
-        revert: 'invalid',
-        zIndex: 100,
-        start: function(ev, ui){
-            ui.helper.addClass('dragging');
-        }
-    });
+    $('.draggable__component.header').draggable(options);
 
-    $('.draggable__component.footer').draggable({
-        containment: 'body',
-        cursor: 'crosshair',
-        revert: 'invalid',
-        zIndex: 100,
-        start: function(ev, ui){
-            ui.helper.addClass('dragging');
-        }
-    });
+    $('.draggable__component.content').draggable(options);
 
+    $('.draggable__component.footer').draggable(options);
 
 };
 
