@@ -1,21 +1,17 @@
 <template name="dragDrop">
+
     <h3>Drag-n-Drop POC</h3>
+
     <div id="dnd-container" class="container-fluid">
-        <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-xs-12 draggable__container">
             {{#each draggable}}
                 {{> draggableElement}}
             {{/each}}
         </div>
-        <div class="col-lg-6 col-md-6  col-xs-12">
+        <div class="col-lg-6 col-md-6  col-xs-12 droppable__container">
             <div class="droppable__zone">
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
 </template>

@@ -1,3 +1,7 @@
+
+.draggable__container{
+  z-index:50;
+}
 .draggable__component{
   background: #5f85a9;
   color: white;
@@ -7,6 +11,9 @@
   margin: 10px;
 }
 
+.droppable__container{
+  z-index: 20;
+}
 .droppable__zone{
   border: 2px dashed black;
   background: gray;

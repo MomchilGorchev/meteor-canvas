@@ -17,5 +17,5 @@ Template.dragDrop.rendered = function(){
 
     $('.droppable__zone').droppable({
         zIndex: 60
-    });
-}
+    }).sortable();
+};
