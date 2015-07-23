@@ -6,6 +6,10 @@ Router.configure({
 
 Router.map(function(){
 
+    this.route('home', {
+        path: '/'
+    });
+
     this.route('drag-n-drop', {
         path: '/drag-n-drop',
         template: 'dragDrop',
