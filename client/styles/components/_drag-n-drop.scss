@@ -9,15 +9,59 @@
   height: auto;
   float: left;
   margin: 10px;
+
+  &.header{
+    background-color: skyblue;
+
+  }
+
+  &.content{
+    background-color: #e7eb9d;
+
+  }
+
+  &.footer{
+    background-color: #eb6ecd;
+
+  }
+
 }
 
 .droppable__container{
   z-index: 20;
 }
-.droppable__zone{
-  border: 2px dashed black;
-  background: gray;
-  width:300px;
-  height: 500px;
-  float: right;
+.droppable{
+  &__zone{
+    border: 2px dashed black;
+    background: gray;
+    width:330px;
+    height: 530px;
+    float: right;
+  }
+
+  &__header{
+    height: 70px;
+    margin: 4px 4px 7px;
+    background-color: skyblue;
+  }
+
+  &__content{
+    height: 350px;
+    margin: 4px 4px 7px;
+    background-color: #e7eb9d;
+
+  }
+
+  &__footer{
+    height: 80px;
+    margin: 4px;
+    background-color: #eb6ecd;
+
+  }
+
+  &__placeholder{
+    opacity: 0.5;
+    text-align: center;
+    padding-top: 15px;
+  }
 }
