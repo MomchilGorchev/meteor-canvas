@@ -9,20 +9,27 @@
   height: auto;
   float: left;
   margin: 10px;
+  padding:4px;
 
   &.header{
     background-color: skyblue;
-
+    &.dragging{
+      border: 1px solid black;
+    }
   }
 
   &.content{
     background-color: #e7eb9d;
-
+    &.dragging{
+      border: 1px solid black;
+    }
   }
 
   &.footer{
     background-color: #eb6ecd;
-
+    &.dragging{
+      border: 1px solid black;
+    }
   }
 
 }

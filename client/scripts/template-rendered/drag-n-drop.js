@@ -1,27 +1,33 @@
 Template.draggableElement.rendered = function(){
 
     $('.draggable__component.header').draggable({
-        containment: '#dnd-container',
+        containment: 'body',
         cursor: 'crosshair',
         revert: 'invalid',
-
-        zIndex: 100
+        zIndex: 100,
+        start: function(ev, ui){
+            ui.helper.addClass('dragging');
+        }
     });
 
     $('.draggable__component.content').draggable({
-        containment: '#dnd-container',
+        containment: 'body',
         cursor: 'crosshair',
         revert: 'invalid',
-
-        zIndex: 100
+        zIndex: 100,
+        start: function(ev, ui){
+            ui.helper.addClass('dragging');
+        }
     });
 
     $('.draggable__component.footer').draggable({
-        containment: '#dnd-container',
+        containment: 'body',
         cursor: 'crosshair',
         revert: 'invalid',
-
-        zIndex: 100
+        zIndex: 100,
+        start: function(ev, ui){
+            ui.helper.addClass('dragging');
+        }
     });
 
 
