@@ -1,0 +1,4 @@
+Template.dragDrop.rendered = function(){
+
+
+};
