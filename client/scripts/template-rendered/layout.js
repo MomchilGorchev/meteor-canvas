@@ -55,4 +55,44 @@ Template.mainLayout.rendered = function(){
 
     Draw();
 
+    function changePosition(){
+        for (var k = 0; k < starsAmount; k++){
+            changeElement(stars[k]);
+        }
+    }
+    changePosition();
+
+    function changeElement(star){
+        var pos = {
+            x: Math.random() * WIDTH,
+            y: Math.random() * HEIGHT
+        };
+
+        TweenMax.to(star, Math.random() * 5, {
+            x: pos.x,
+            y: pos.y,
+            ease: Cubic.easeInOut,
+            onComplete: function(){
+                changeElement(star);
+            }
+        });
+    }
+
+    function animateThis(){
+
+        var anim = requestAnimationFrame(animateThis);
+
+        ctx.fillStyle = 'rgb(100, 123, 214)';
+        ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+        for (var i = 0; i < starsAmount; i++){
+            stars[i].draw(ctx);
+        }
+
+    }
+
+
+    animateThis();
+
+
 };
