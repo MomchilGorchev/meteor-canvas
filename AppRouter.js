@@ -8,7 +8,10 @@ Router.map(function(){
 
     this.route('drag-n-drop', {
         path: '/drag-n-drop',
-        template: 'dragDrop'
+        template: 'dragDrop',
+        waitOn: function(){
+            Meteor.subscribe('draggable');
+        }
     });
 
     this.route('canvas', {

@@ -53,7 +53,7 @@ Template.canvas.rendered = function(){
             stars.push(star);
         }
 
-        console.log(stars);
+        //console.log(stars);
         for(var j = 0; j < stars.length; j++){
             stars[j].draw(ctx);
         }
