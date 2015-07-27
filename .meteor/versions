@@ -7,6 +7,7 @@ blaze-tools@1.0.3
 boilerplate-generator@1.0.3
 callback-hook@1.0.3
 check@1.0.5
+coffeescript@1.0.6
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
@@ -14,6 +15,9 @@ email@1.0.6
 fastclick@1.0.3
 fortawesome:fontawesome@4.3.0
 fourseven:scss@3.2.0
+gadicohen:famous@0.5.2
+gadicohen:famous-views@1.2.2
+gadicohen:modules@0.0.5
 geojson-utils@1.0.3
 html-tools@1.0.4
 htmljs@1.0.4
@@ -29,6 +33,7 @@ iron:location@1.0.9
 iron:middleware-stack@1.0.9
 iron:router@1.0.9
 iron:url@1.0.9
+jag:pince@0.0.6
 jquery@1.11.3_2
 json@1.0.3
 launch-screen@1.0.2
@@ -46,6 +51,8 @@ mongo-livedata@1.0.8
 mrt:flash-messages@1.0.1
 observe-sequence@1.0.6
 ordered-dict@1.0.3
+pierreeric:cssc@1.0.4
+raix:eventemitter@0.1.2
 random@1.0.3
 reactive-dict@1.1.0
 reactive-var@1.0.5

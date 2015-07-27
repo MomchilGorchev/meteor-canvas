@@ -1,6 +1,26 @@
 <template name="home">
-    <p>
-        Showcase of some functionality and how its working inside the reactive Meteor universe<br />
-        Stay tuned for more examples (Y)
-    </p>
+
+    {{#Scene}}
+        {{#Node rotation=reactiveRotate}}
+            {{#DOMElement}}
+                <p style="border: 3px solid red;">
+                    Showcase of some functionality and how its working inside the reactive Meteor universe<br />
+                    Stay tuned for more examples (Y)
+                    <br />
+                    <br />
+                    This content is rotating
+                </p>
+            {{/DOMElement}}
+        {{/Node}}
+
+        {{#Node scale=reactivePosition}}
+            {{#DOMElement}}
+                <p style="border: 3px solid green;">
+                    This content is scaling
+                </p>
+            {{/DOMElement}}
+        {{/Node}}
+    {{/Scene}}
+
+
 </template>
