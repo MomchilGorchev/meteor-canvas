@@ -1,37 +1,40 @@
-Template.draggableElement.rendered = function(){
-
-    var options = {
-        containment: 'body',
-        cursor: 'crosshair',
-        revert: 'invalid',
-        zIndex: 100,
-        start: function(ev, ui){
-            ui.helper.addClass('dragging');
-        }
-    };
-
-    $('.draggable__component.header').draggable(options);
-
-    $('.draggable__component.content').draggable(options);
-
-    $('.draggable__component.footer').draggable(options);
-
-};
+//Template.draggableElement.rendered = function(){
+//
+//};
 
 Template.dragDrop.rendered = function(){
+    var containers = [
+        document.querySelector('.draggable__container'),
+        document.querySelector('.droppable__zone')
+    ];
+    //var elems = document.querySelectorAll('.draggable__component');
+    //for(var i = 0; i < elems.length; i++ ){
+    //
+    //    containers.push(elems[i]);
+    //}
+    var dropZone = document.querySelector('.droppable__zone');
 
-    $('.droppable__header').droppable({
-        zIndex: 60,
-        accept: ".draggable__component.header"
-    });
+    dragula(containers, {
+        revertOnSpill: true,
+        copy:true,
+        accepts: function(el, target, source, sibling){
 
-    $('.droppable__content').droppable({
-        zIndex: 60,
-        accept: '.draggable__component.content'
-    });
+            //
+            //console.log('el =>', el);
+            //console.log('target =>', target);
+            //console.log('source =>', source);
+            //console.log('sibling =>', sibling);
 
-    $('.droppable__footer').droppable({
-        zIndex: 60,
-        accept: '.draggable__component.footer'
+            if (dropZone.querySelectorAll('.content').length > 0 && dropZone.querySelectorAll('.content').length < 2 && el.classList){
+                return target.childElementCount < 2;
+            } else if(target.querySelectorAll('.content').length === 0) {
+                return target.childElementCount < 3;
+            } else {
+                return false;
+            }
+
+        }
     });
 };
+
+
