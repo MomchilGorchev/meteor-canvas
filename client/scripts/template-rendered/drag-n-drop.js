@@ -25,9 +25,15 @@ Template.dragDrop.rendered = function(){
             //console.log('source =>', source);
             //console.log('sibling =>', sibling);
 
-            if (dropZone.querySelectorAll('.content').length > 0 && dropZone.querySelectorAll('.content').length < 2 && el.classList){
+            if (dropZone.querySelectorAll('.content').length > 0
+                && $(el).hasClass('.content')){
+                return false;
+            }
+            else if(dropZone.querySelectorAll('.content').length > 0
+                && !$(el).hasClass('.content')){
                 return target.childElementCount < 2;
-            } else if(target.querySelectorAll('.content').length === 0) {
+            }
+            else if(target.querySelectorAll('.content').length === 0) {
                 return target.childElementCount < 3;
             } else {
                 return false;
