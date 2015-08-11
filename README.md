@@ -1,3 +1,3 @@
-## Canvas with reactive data from Meteor
+## Canvas with Meteor reactive data
 
-### Using Meteor starter kit
+### Using [Meteor starter kit](https://github.com/MomchilGorchev/meteor-start)
