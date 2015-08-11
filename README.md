@@ -1,4 +1,3 @@
-## Meteor Starter Kit
+## Canvas with reactive data from Meteor
 
-### For an easy start with MeteorJS
-
+### Using Meteor starter kit
